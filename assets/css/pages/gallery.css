@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Élégance Mode — Styles de la page Galerie (gallery.css)
+   ========================================================================== */
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  color: var(--color-sage-dark);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+}
+
+/* --- Hero Section --- */
+.gallery-hero {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 24px 2rem;
+  text-align: center;
+}
+
+.gallery-hero h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.gallery-hero h1 em {
+  color: var(--color-sage-dark);
+  font-weight: 400;
+}
+
+.hero-copy {
+  max-width: 600px;
+  margin: 1.4rem auto 2.5rem;
+  color: var(--color-muted);
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+/* --- Filtres interactifs --- */
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-sage);
+  background: #f0f3ee;
+}
+
+.filter-btn.is-active {
+  background: var(--color-sage-dark);
+  border-color: var(--color-sage-dark);
+  color: white;
+}
+
+/* --- Grille Lookbook --- */
+.gallery-section {
+  width: min(1200px, calc(100% - 48px));
+  margin: 2.5rem auto clamp(4rem, 8vw, 7rem);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms ease, box-shadow 220ms ease, opacity 250ms ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-card.is-hidden {
+  display: none !important;
+}
+
+.card-image-box {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  background: #e7e7e0;
+}
+
+.card-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+
+.gallery-card:hover .card-image-box img {
+  transform: scale(1.04);
+}
+
+.card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(37, 44, 39, 0.85);
+  backdrop-filter: blur(4px);
+  color: white;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  border-radius: 2px;
+}
+
+.card-info {
+  padding: 1.4rem 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-info h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-ink);
+}
+
+.card-info p {
+  margin: 0 0 1.2rem;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  line-height: 1.65;
+  flex-grow: 1;
+}
+
+.card-tag {
+  align-self: flex-start;
+  padding: 0.3rem 0.75rem;
+  background: #edf0ea;
+  color: var(--color-sage-dark);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+}
+
+/* --- Cartes spéciales dans la grille --- */
+.card-featured {
+  grid-column: span 2;
+}
+
+.card-featured .card-image-box {
+  height: 480px;
+}
+
+.card-wide {
+  grid-column: span 2;
+}
+
+.card-wide .card-image-box {
+  height: 400px;
+}
+
+/* Carte éditoriale typographique */
+.card-editorial {
+  background: #f3f5f0;
+  border: 1px dashed var(--color-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.editorial-box {
+  max-width: 320px;
+}
+
+.editorial-mark {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.4rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-sage);
+  border-radius: 50%;
+  color: var(--color-sage-dark);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.editorial-box h3 {
+  margin: 0.8rem 0 1.2rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+.editorial-sub {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  margin-bottom: 1.6rem;
+}
+
+/* --- CTA Section --- */
+.gallery-cta {
+  padding: clamp(4rem, 7vw, 6.5rem) 24px;
+  background: #e9ece5;
+  text-align: center;
+}
+
+.gallery-cta h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.gallery-cta p:not(.eyebrow) {
+  max-width: 500px;
+  margin: 0 auto 2.2rem;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.hero-button {
+  min-height: 52px;
+  padding: 0 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: var(--color-sage-dark);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.hero-button:hover {
+  background: #3e5143;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-sage-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card-featured, .card-wide {
+    grid-column: span 2;
+  }
+  .card-featured .card-image-box, .card-wide .card-image-box {
+    height: 380px;
+  }
+}
+
+@media (max-width: 620px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .card-featured, .card-wide {
+    grid-column: span 1;
+  }
+  .card-image-box, .card-featured .card-image-box, .card-wide .card-image-box {
+    height: 340px;
+  }
+  .gallery-filters {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+  }
+  .filter-btn {
+    white-space: nowrap;
+  }
+}
