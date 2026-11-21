@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f7f3">
+    <meta name="description" content="Contactez Élégance Mode pour toute question concernant nos collections et votre expérience.">
+    <title>Contact — Élégance Mode</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/pages/contact.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/contact.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Élégance Mode, accueil">
+          <span class="brand-mark" aria-hidden="true">É</span>
+          <span class="brand-name">ÉLÉGANCE <span>MODE</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="collections.html">Collections</a>
+          <a href="gallery.html">Galerie</a>
+          <a class="nav-contact" href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="contact-hero" aria-labelledby="page-title">
+        <p class="eyebrow">UN MOT, UNE QUESTION ?</p>
+        <h1 id="page-title">Parlons de <em>votre style.</em></h1>
+        <p class="hero-copy">Notre équipe est à votre écoute pour vous accompagner dans le choix de vos pièces et répondre à toutes vos questions.</p>
+        <div class="hero-note"><span class="note-dot" aria-hidden="true"></span> Nous vous répondons avec attention, du lundi au vendredi.</div>
+      </section>
+
+      <section class="contact-layout" aria-label="Coordonnées et formulaire de contact">
+        <div class="contact-information">
+          <p class="eyebrow">RESTONS EN LIEN</p>
+          <h2>Nous sommes là<br>pour vous.</h2>
+          <p class="information-copy">Un conseil, une question sur une commande ou simplement envie de nous écrire ? Choisissez le moyen qui vous convient.</p>
+
+          <div class="contact-methods">
+            <a class="contact-method" href="mailto:bonjour@elegance-mode.fr">
+              <span class="method-icon" aria-hidden="true">✉</span>
+              <span><span class="method-label">ÉCRIVEZ-NOUS</span><strong>bonjour@elegance-mode.fr</strong></span>
+              <span class="method-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="contact-method" href="https://wa.me/?text=Bonjour%20%C3%89l%C3%A9gance%20Mode%2C%20j%E2%80%99aimerais%20vous%20contacter." target="_blank" rel="noreferrer">
+              <span class="method-icon whatsapp-icon" aria-hidden="true">◉</span>
+              <span><span class="method-label">UN MESSAGE RAPIDE</span><strong>Nous écrire sur WhatsApp</strong></span>
+              <span class="method-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="contact-method contact-hours">
+              <span class="method-icon" aria-hidden="true">◷</span>
+              <span><span class="method-label">NOS HORAIRES</span><strong>Lun. – ven. · 9h – 18h</strong></span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <span>RETROUVEZ-NOUS</span>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (nouvel onglet)">Instagram ↗</a>
+            <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest (nouvel onglet)">Pinterest ↗</a>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <div class="form-heading">
+            <p class="eyebrow">VOTRE MESSAGE</p>
+            <h2>Comment pouvons-nous vous aider ?</h2>
+          </div>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Votre nom</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Ex. Camille Martin" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Votre adresse e-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="subject">Sujet de votre message</label>
+              <select id="subject" name="subject" required>
+                <option value="" selected disabled>Choisissez un sujet</option>
+                <option value="collection">Question sur une collection</option>
+                <option value="commande">Question sur une commande</option>
+                <option value="partenariat">Presse ou partenariat</option>
+                <option value="autre">Autre demande</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Dites-nous tout, nous vous lisons avec attention…" required></textarea>
+            </div>
+            <button class="submit-button" type="submit">Envoyer le message <span aria-hidden="true">→</span></button>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+            <p class="form-disclaimer">Formulaire de démonstration : l’envoi réel des messages n’est pas encore connecté.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand footer-brand" href="index.html" aria-label="Élégance Mode, accueil">
+          <span class="brand-mark" aria-hidden="true">É</span>
+          <span class="brand-name">ÉLÉGANCE <span>MODE</span></span>
+        </a>
+        <p>Le style, en toute simplicité.</p>
+        <span class="footer-copy">© <span id="current-year">2026</span> Élégance Mode</span>
+      </div>
+    </footer>
+  </body>
+</html>
